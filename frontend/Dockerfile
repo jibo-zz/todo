@@ -4,9 +4,9 @@ FROM node:12.16.1-alpine
 WORKDIR /app/
 
 # Install dependencies
-# COPY package.json yarn.lock /app/
+COPY package.json yarn.lock /app/
 
-# RUN npm install
+RUN yarn
 
 # Add rest of the client code
 COPY . /app/
